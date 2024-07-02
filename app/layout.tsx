@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
+import { Jost, Playball } from "next/font/google";
 import "./globals.css";
+
+// const jost = Jost({ subsets: ["latin"] });
+// const playball = Playball({
+//   subsets: ["latin"],
+//   variable: "--font-playball",
+//   weight: ["400"],
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={""}>{children}</body>
+      {/* <body className={`${jost.className} ${playball.variable}`}> */}
+      <body>
+        {children}
+        <div id="modal-container"></div>
+      </body>
     </html>
   );
 }
