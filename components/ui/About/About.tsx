@@ -7,7 +7,7 @@ const userData = {
     role: "Frontend Developer",
     experience: "2 Years",
     location: "Mumbai",
-    about: "Hi, I am very good frontend developers",
+    about: "Hi, I am very good frontend developer. I love building futeristic websites and explore new technologies",
   };
 
 const About = () => {

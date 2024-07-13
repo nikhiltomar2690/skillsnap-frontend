@@ -13,8 +13,8 @@ const Description = ({ description }: Props) => {
   return (
     <div
       className="about card-shadow card-padding rounded basis-4/6 relative flex flex-col  justify-between"
-      onMouseEnter={() => setIsImageHovered(true)}
-      onMouseLeave={() => setIsImageHovered(false)}
+      // onMouseEnter={() => setIsImageHovered(true)}
+      // onMouseLeave={() => setIsImageHovered(false)}
     >
       {(isImageHovered || isButtonHovered) && (
         <button
@@ -30,7 +30,12 @@ const Description = ({ description }: Props) => {
         <div className="text-slate-500 text-2xl font-medium">
           Little about me
         </div>
-        <div>...</div>
+        <textarea
+              defaultValue={description}
+              className="bg-transparent text-xl font-medium text-slate-900 w-full text-left p-0 placeholder-black focus-visible:outline-none placeholder:text-3xl placeholder:text-black placeholder:font-medium min-h-24 overflow-hidden resize-none"
+              placeholder="..."
+              rows={2}
+            />
       </div>
     </div>
   );
