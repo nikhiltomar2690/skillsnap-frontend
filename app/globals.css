@@ -70,6 +70,27 @@
   }
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  touch-action: manipulation;
+  font-feature-settings: "case" 1, "rlig" 1, "calt" 0;
+}
+
+html,
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue",
+    "Helvetica", sans-serif;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .card-shadow {
   box-shadow: 0px 1px 8px 0px rgba(131, 131, 131, 0.25);
 }
@@ -84,6 +105,13 @@
 .rounded {
   border-radius: 1.5rem;
 }
-.bg-neutral-900{
+.bg-neutral-900 {
   background-color: rgba(33, 33, 33, 1);
+}
+.modal-open {
+  overflow-y: hidden;
+}
+
+.experience-shadow {
+  box-shadow: 0px 1px 8px 0px rgba(131, 131, 131, 0.25);
 }

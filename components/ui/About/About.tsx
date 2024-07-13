@@ -5,7 +5,7 @@ import Description from "./Description";
 const userData = {
     name: "Prathmesh Mhatre",
     role: "Frontend Developer",
-    experience: "2",
+    experience: "2 Years",
     location: "Mumbai",
     about: "Hi, I am very good frontend developers",
   };
@@ -23,21 +23,30 @@ const About = () => {
               placeholder="Your Name"
               maxLength={16}
             />
-            {/* <div className="font-playball text-3xl">Your Name</div> */}
             <input
               className="bg-transparent border-none  p-0 text-base placeholder-white focus-visible:outline-none placeholder-opacity-75"
               placeholder="Role"
               maxLength={28}
               defaultValue={userData.role}
             />
-            {/* <div className="text-base">Role</div> */}
           </div>
           <div className="experiance card-shadow card-padding rounded sm:col-span-2 flex flex-col justify-center items-center cursor-pointer gap-2">
-            <div className="text-black text-3xl font-medium">...</div>
+            {/* <div className="text-black text-3xl font-medium">...</div> */}
+            <input
+              defaultValue={userData.experience}
+              className="bg-transparent text-xl font-medium text-slate-900 w-full text-center p-0 placeholder-black focus-visible:outline-none placeholder:text-3xl placeholder:text-black placeholder:font-medium"
+              placeholder="..."
+              maxLength={8}
+            />
             <div className="font-medium text-slate-500">Experience</div>
           </div>
           <div className="experiance card-shadow card-padding rounded sm:col-span-2 flex flex-col justify-center items-center cursor-pointer gap-2">
-            <div className="text-black text-3xl font-medium">...</div>
+          <input
+              defaultValue={userData.location}
+              className="bg-transparent text-xl font-medium text-slate-900 w-full text-center p-0 placeholder-black focus-visible:outline-none placeholder:text-3xl placeholder:text-black placeholder:font-medium"
+              placeholder="..."
+              maxLength={8}
+            />
             <div className="font-medium text-slate-500">Location </div>
           </div>
           <div className="experiance card-shadow card-padding rounded sm:col-span-2 flex flex-col justify-center items-center cursor-pointer">
