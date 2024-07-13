@@ -25,7 +25,7 @@ const About = ({ description }: Props) => {
           <Pencil />
         </button>
       )}
-      <Image src={"/ic_about.png"} alt="palm waving" width={40} height={40}/>
+      <Image src={"/ic_about.png"} alt="palm waving" width={40} height={40} />
       <div>
         <div className="text-slate-500 text-2xl font-medium">
           Little about me
