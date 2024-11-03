@@ -1,7 +1,7 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Plus, EllipsisVertical, Check, Link2 } from "lucide-react";
+import { Plus, EllipsisVertical, Check, Link2, X } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -22,6 +22,191 @@ import {
 } from "@/components/ui/select";
 import TextareaField from "./custom/TextareaField";
 
+interface Experience {
+  companyName: string;
+  startDate: string;
+  endDate: string;
+  title: string;
+  skills: string[];
+  description: string;
+  link: string;
+}
+
+const ExperienceCard = ({
+  experience,
+  isFirstInRow,
+  onClick,
+}: {
+  experience: Experience;
+  isFirstInRow: boolean;
+  onClick: () => void;
+}) => {
+  return (
+    <div
+      className={`${
+        isFirstInRow
+          ? "w-full lg:w-[calc(50%-12px)]"
+          : "w-full lg:w-[calc(25%-12px)]"
+      } h-[270px] rounded-3xl experience-shadow bg-white flex flex-col justify-between py-6 px-[18px] mb-6 cursor-pointer`}
+      onClick={onClick}
+    >
+      <div>
+        <h2 className="text-[22px] text-neutral-900 font-medium">
+          {experience.companyName}
+        </h2>
+        <p className="text-base text-neutral-500 font-medium">
+          {experience.startDate} - {experience.endDate}
+        </p>
+      </div>
+      <div>
+        <h2 className="text-[22px] text-neutral-900 font-medium">
+          {experience.title}
+        </h2>
+        <p className="text-sm text-neutral-900 font-medium">See More</p>
+      </div>
+    </div>
+  );
+};
+
+const ExperienceDialog = ({
+  experience,
+  isOpen,
+  onClose,
+}: {
+  experience: Experience;
+  isOpen: boolean;
+  onClose: () => void;
+}) => {
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="max-w-[90vw] sm:max-w-[681px] p-0 overflow-hidden rounded-tl-[24px] rounded-tr-[24px] rounded-bl-[24px] rounded-br-[24px]">
+        <div className="p-4 sm:p-6 flex flex-col h-full">
+          <DialogHeader className="flex flex-row items-center justify-between mb-4">
+            <div className="flex-1">
+              <DialogTitle className="text-xl sm:text-2xl font-bold text-black">
+                {experience.companyName}
+              </DialogTitle>
+            </div>
+            <div className="hidden sm:flex items-center gap-4">
+              <p className="text-[#FF6B00] font-semibold">
+                {experience.startDate} - {experience.endDate}
+              </p>
+              <Button variant="link" onClick={onClose} className="p-0 h-auto">
+                <X className="h-6 w-6 text-black" />
+              </Button>
+            </div>
+            <div className="flex sm:hidden items-center gap-4">
+              <Button variant="link" onClick={onClose} className="p-0 h-auto">
+                <X className="h-6 w-6 text-black" />
+              </Button>
+            </div>
+          </DialogHeader>
+          <hr className="border-gray-200 mb-4" />
+
+          {/* Content that adjusts to the available space */}
+          <div className="space-y-4 flex-grow">
+            <div className="flex justify-between items-center">
+              <h3 className="text-lg sm:text-xl font-semibold text-black">
+                <span className="text-gray-700">Title:</span> {experience.title}
+              </h3>
+              <Button
+                variant="ghost"
+                className="text-black p-0 h-auto hover:bg-white hover:text-black"
+                onClick={() => window.open(experience.link, "_blank")}
+              >
+                View <span className="ml-1">↗</span>
+              </Button>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold text-gray-700 mb-2">
+                Skills:
+              </h4>
+              <div className="flex flex-wrap gap-2 rounded-[4px]">
+                {experience.skills.map((skill, index) => (
+                  <span
+                    key={index}
+                    className="bg-white border border-gray-200 text-gray-800 px-3 py-1 rounded-[4px] text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold text-gray-700 mb-2">
+                Description:
+              </h4>
+              {/* Dynamic height for description with scroll */}
+              <div className="text-gray-600 max-h-[150px] overflow-y-auto pr-2">
+                {experience.description}
+              </div>
+            </div>
+          </div>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
+
+interface ProfessionalExperienceProps {
+  experiences: Experience[];
+  showCardActions?: boolean;
+}
+
+const ProfessionalExperience = ({
+  experiences,
+  showCardActions = true,
+}: ProfessionalExperienceProps) => {
+  const [showAll, setShowAll] = useState(false);
+  const [selectedExperience, setSelectedExperience] =
+    useState<Experience | null>(null);
+  const visibleExperiences = showAll ? experiences : experiences.slice(0, 3);
+
+  return (
+    <div className="space-y-1">
+      <div className="flex flex-wrap justify-between gap-2">
+        <h2 className="font-semibold text-[22px]">Professional Experience</h2>
+        {showCardActions && (
+          <div className="flex items-center gap-3">
+            <ProfessionalCard />
+            <Button className="rounded-full text-white">
+              <EllipsisVertical className="h-4 w-4" />
+            </Button>
+          </div>
+        )}
+      </div>
+      <div className="flex flex-wrap gap-3 pt-6">
+        {visibleExperiences.map((experience, index) => (
+          <ExperienceCard
+            key={index}
+            experience={experience}
+            isFirstInRow={index % 3 === 0}
+            onClick={() => setSelectedExperience(experience)}
+          />
+        ))}
+      </div>
+      {experiences.length > 3 && (
+        <Button
+          variant="outline"
+          className="w-full mt-0 text-center border-[1px] border-gray-300 rounded-[10px]"
+          onClick={() => setShowAll(!showAll)}
+        >
+          {showAll ? "Show Less" : "View More"}
+        </Button>
+      )}
+      {selectedExperience && (
+        <ExperienceDialog
+          experience={selectedExperience}
+          isOpen={!!selectedExperience}
+          onClose={() => setSelectedExperience(null)}
+        />
+      )}
+    </div>
+  );
+};
+
 const ProfessionalCard = () => {
   return (
     <div className="rounded-3xl">
@@ -37,7 +222,6 @@ const ProfessionalCard = () => {
             <DialogTitle className="text-[22px]">Experience</DialogTitle>
           </DialogHeader>
           <form className="space-y-3 max-h-[500px] overflow-auto">
-            {/* company name */}
             <div className="space-y-2.5">
               <Label className="text-lg text-neutral-900">Company Name</Label>
               <div className="flex items-center gap-2">
@@ -50,7 +234,6 @@ const ProfessionalCard = () => {
                 </div>
               </div>
             </div>
-            {/* Title */}
             <div className="space-y-2.5">
               <Label className="text-lg text-neutral-900">Title</Label>
               <div className="flex sm:flex-row flex-col items-center gap-2">
@@ -70,7 +253,6 @@ const ProfessionalCard = () => {
                 </Select>
               </div>
             </div>
-            {/* From and To */}
             <div className="flex md:flex-row flex-col justify-center items-center md:items-start gap-2">
               <div className="flex flex-col gap-2.5 w-full">
                 <Label className="text-lg text-neutral-900">From</Label>
@@ -96,7 +278,6 @@ const ProfessionalCard = () => {
                 </div>
               </div>
             </div>
-            {/* Description */}
             <div className="flex flex-col gap-2.5">
               <Label className="text-lg text-neutral-900">Description</Label>
               <TextareaField
@@ -114,71 +295,6 @@ const ProfessionalCard = () => {
         </DialogContent>
       </Dialog>
     </div>
-  );
-};
-
-const FilledProfessionalState = () => {
-  return (
-    <div className="flex lg:flex-row flex-col justify-center items-center gap-6">
-      <div className="max-w-[556px] w-full h-[270px] rounded-3xl experience-shadow bg-white flex flex-col justify-between py-6 px-[18px]">
-        <div>
-          <h2 className="text-[22px] text-neutral-900 font-medium">Dribbble</h2>
-          <p className="text-base text-neutral-500 font-medium">2015 - 2019</p>
-        </div>
-        <div>
-          <h2 className="text-[22px] text-neutral-900 font-medium">
-            Product Designer
-          </h2>
-          <p className="text-sm text-neutral-900 font-medium">See More</p>
-        </div>
-      </div>
-      <div className="w-[267px] h-[270px] rounded-3xl experience-shadow bg-white flex flex-col justify-between py-6 px-[18px]">
-        <div>
-          <h2 className="text-[22px] text-neutral-900 font-medium">Dribbble</h2>
-          <p className="text-base text-neutral-500 font-medium">2015 - 2019</p>
-        </div>
-        <div>
-          <h2 className="text-[22px] text-neutral-900 font-medium">
-            Product Designer
-          </h2>
-          <p className="text-sm text-neutral-900 font-medium">See More</p>
-        </div>
-      </div>
-      <div className="w-[267px] h-[270px] rounded-3xl experience-shadow bg-white flex flex-col justify-between py-6 px-[18px]">
-        <div>
-          <h2 className="text-[22px] text-neutral-900 font-medium">Dribbble</h2>
-          <p className="text-base text-neutral-500 font-medium">2015 - 2019</p>
-        </div>
-        <div>
-          <h2 className="text-[22px] text-neutral-900 font-medium">
-            Product Designer
-          </h2>
-          <p className="text-sm text-neutral-900 font-medium">See More</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const ProfessionalExperience = () => {
-  return (
-    <>
-      <div className="flex flex-wrap justify-between gap-2">
-        <h2 className="font-semibold text-[22px]">Professional Experience</h2>
-        <div className="flex items-center gap-3">
-          <ProfessionalCard />
-          <Button className="rounded-full text-white">
-            <EllipsisVertical className="h-4 w-4" />
-          </Button>
-        </div>
-      </div>
-      <div className="flex lg:flex-row flex-col items-center justify-between gap-6">
-        <div className="max-w-[360px] w-full h-[271px] border-dashed border border-neutral-400 rounded-3xl"></div>
-        <div className="max-w-[360px] w-full h-[271px] border-dashed border border-neutral-400 rounded-3xl"></div>
-        <div className="max-w-[360px] w-full h-[271px] border-dashed border border-neutral-400 rounded-3xl"></div>
-      </div>
-      <FilledProfessionalState />
-    </>
   );
 };
 

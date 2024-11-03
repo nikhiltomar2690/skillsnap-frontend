@@ -1,0 +1,158 @@
+Date : 2024-10-29 17:10:31
+Directory : g:\SKillSnapFrontend
+Total : 91 files,  16244 codes, 330 comments, 704 blanks, all 17278 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          4 |      8,770 |          0 |          3 |      8,773 |
+| TypeScript JSX     |         71 |      7,102 |        305 |        642 |      8,049 |
+| TypeScript         |          7 |        196 |         23 |         17 |        236 |
+| CSS                |          1 |         97 |          0 |         21 |        118 |
+| JSON with Comments |          1 |         26 |          0 |          1 |         27 |
+| Markdown           |          1 |         23 |          0 |         14 |         37 |
+| JavaScript         |          3 |         19 |          2 |          5 |         26 |
+| XML                |          3 |         11 |          0 |          1 |         12 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                       | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                          |         91 |     16,244 |        330 |        704 |     17,278 |
+| . (Files)                                                                  |          9 |      8,919 |          2 |         25 |      8,946 |
+| app                                                                        |         15 |      2,122 |         63 |        157 |      2,342 |
+| app (Files)                                                                |          3 |        127 |          0 |         27 |        154 |
+| app\[slug]                                                                 |          1 |        244 |          4 |          8 |        256 |
+| app\addproj                                                                |          1 |        474 |          1 |         16 |        491 |
+| app\api                                                                    |          1 |        106 |         23 |         11 |        140 |
+| app\api\auth                                                               |          1 |        106 |         23 |         11 |        140 |
+| app\api\auth\[...nextauth]                                                 |          1 |        106 |         23 |         11 |        140 |
+| app\forgotpass                                                             |          1 |        113 |          0 |          9 |        122 |
+| app\link                                                                   |          1 |         93 |          2 |          8 |        103 |
+| app\login                                                                  |          1 |         92 |          0 |          8 |        100 |
+| app\loginuser                                                              |          1 |        201 |         17 |         18 |        236 |
+| app\profile                                                                |          1 |        206 |          3 |         10 |        219 |
+| app\profile\edit                                                           |          1 |        206 |          3 |         10 |        219 |
+| app\projectcard                                                            |          1 |          4 |          0 |          2 |          6 |
+| app\register                                                               |          1 |        196 |          7 |         15 |        218 |
+| app\reset                                                                  |          1 |        122 |          0 |          8 |        130 |
+| app\verify                                                                 |          1 |        144 |          6 |         17 |        167 |
+| components                                                                 |         59 |      5,051 |        253 |        501 |      5,805 |
+| components (Files)                                                         |         12 |      1,177 |        229 |         94 |      1,500 |
+| components\Dialogs                                                         |          8 |        544 |          5 |         48 |        597 |
+| components\Dialogue                                                        |          1 |        198 |          0 |         12 |        210 |
+| components\custom                                                          |          2 |         50 |          0 |         10 |         60 |
+| components\forms                                                           |         12 |      1,914 |         14 |        177 |      2,105 |
+| components\icons                                                           |          1 |         20 |          0 |          1 |         21 |
+| components\ui                                                              |         23 |      1,148 |          5 |        159 |      1,312 |
+| components\ui (Files)                                                      |         14 |        902 |          2 |        128 |      1,032 |
+| components\ui\About                                                        |          6 |        189 |          3 |         24 |        216 |
+| components\ui\About (Files)                                                |          2 |         74 |          0 |          7 |         81 |
+| components\ui\About\Description                                            |          2 |         60 |          3 |         10 |         73 |
+| components\ui\About\DisplayPicture                                         |          2 |         55 |          0 |          7 |         62 |
+| components\ui\DisplayPicture                                               |          1 |         14 |          0 |          4 |         18 |
+| components\ui\Modal                                                        |          2 |         43 |          0 |          3 |         46 |
+| lib                                                                        |          4 |        141 |         12 |         19 |        172 |
+| public                                                                     |          3 |         11 |          0 |          1 |         12 |
+| utils                                                                      |          1 |          0 |          0 |          1 |          1 |
++----------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                   | language           | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| g:\SKillSnapFrontend\.eslintrc.json                                        | JSON               |          3 |          0 |          1 |          4 |
+| g:\SKillSnapFrontend\README.md                                             | Markdown           |         23 |          0 |         14 |         37 |
+| g:\SKillSnapFrontend\app\[slug]\page.tsx                                   | TypeScript JSX     |        244 |          4 |          8 |        256 |
+| g:\SKillSnapFrontend\app\addproj\page.tsx                                  | TypeScript JSX     |        474 |          1 |         16 |        491 |
+| g:\SKillSnapFrontend\app\api\auth\[...nextauth]\route.ts                   | TypeScript         |        106 |         23 |         11 |        140 |
+| g:\SKillSnapFrontend\app\forgotpass\page.tsx                               | TypeScript JSX     |        113 |          0 |          9 |        122 |
+| g:\SKillSnapFrontend\app\globals.css                                       | CSS                |         97 |          0 |         21 |        118 |
+| g:\SKillSnapFrontend\app\layout.tsx                                        | TypeScript JSX     |         26 |          0 |          4 |         30 |
+| g:\SKillSnapFrontend\app\link\page.tsx                                     | TypeScript JSX     |         93 |          2 |          8 |        103 |
+| g:\SKillSnapFrontend\app\login\page.tsx                                    | TypeScript JSX     |         92 |          0 |          8 |        100 |
+| g:\SKillSnapFrontend\app\loginuser\page.tsx                                | TypeScript JSX     |        201 |         17 |         18 |        236 |
+| g:\SKillSnapFrontend\app\page.tsx                                          | TypeScript JSX     |          4 |          0 |          2 |          6 |
+| g:\SKillSnapFrontend\app\profile\edit\page.tsx                             | TypeScript JSX     |        206 |          3 |         10 |        219 |
+| g:\SKillSnapFrontend\app\projectcard\page.tsx                              | TypeScript JSX     |          4 |          0 |          2 |          6 |
+| g:\SKillSnapFrontend\app\register\page.tsx                                 | TypeScript JSX     |        196 |          7 |         15 |        218 |
+| g:\SKillSnapFrontend\app\reset\page.tsx                                    | TypeScript JSX     |        122 |          0 |          8 |        130 |
+| g:\SKillSnapFrontend\app\verify\page.tsx                                   | TypeScript JSX     |        144 |          6 |         17 |        167 |
+| g:\SKillSnapFrontend\components.json                                       | JSON               |         17 |          0 |          0 |         17 |
+| g:\SKillSnapFrontend\components\CertificateComponent.tsx                   | TypeScript JSX     |        101 |         99 |         11 |        211 |
+| g:\SKillSnapFrontend\components\ContactComponents.tsx                      | TypeScript JSX     |         50 |          2 |          7 |         59 |
+| g:\SKillSnapFrontend\components\Dialogs\EmailDialog.tsx                    | TypeScript JSX     |         53 |          1 |          5 |         59 |
+| g:\SKillSnapFrontend\components\Dialogs\InviteDialog.tsx                   | TypeScript JSX     |         67 |          0 |          6 |         73 |
+| g:\SKillSnapFrontend\components\Dialogs\LockDialog.tsx                     | TypeScript JSX     |         52 |          1 |          5 |         58 |
+| g:\SKillSnapFrontend\components\Dialogs\LogoutDialog.tsx                   | TypeScript JSX     |         46 |          0 |          4 |         50 |
+| g:\SKillSnapFrontend\components\Dialogs\PasswordDialog.tsx                 | TypeScript JSX     |         86 |          1 |          6 |         93 |
+| g:\SKillSnapFrontend\components\Dialogs\UsernameDialog.tsx                 | TypeScript JSX     |         64 |          1 |          6 |         71 |
+| g:\SKillSnapFrontend\components\Dialogs\WriteAboutYourself.tsx             | TypeScript JSX     |         69 |          0 |          8 |         77 |
+| g:\SKillSnapFrontend\components\Dialogs\changeEmail.tsx                    | TypeScript JSX     |        107 |          1 |          8 |        116 |
+| g:\SKillSnapFrontend\components\Dialogue\ActionBar.tsx                     | TypeScript JSX     |        198 |          0 |         12 |        210 |
+| g:\SKillSnapFrontend\components\EducationComponent.tsx                     | TypeScript JSX     |         54 |          0 |          6 |         60 |
+| g:\SKillSnapFrontend\components\ProfessionalExperience.tsx                 | TypeScript JSX     |        288 |          2 |         12 |        302 |
+| g:\SKillSnapFrontend\components\ProjectCard.tsx                            | TypeScript JSX     |        500 |        121 |         28 |        649 |
+| g:\SKillSnapFrontend\components\ProjectDescriptionContainer.tsx            | TypeScript JSX     |         21 |          0 |          2 |         23 |
+| g:\SKillSnapFrontend\components\ProjectImageContainer.tsx                  | TypeScript JSX     |         16 |          0 |          2 |         18 |
+| g:\SKillSnapFrontend\components\ProjectLink.tsx                            | TypeScript JSX     |         11 |          5 |          3 |         19 |
+| g:\SKillSnapFrontend\components\Projects.tsx                               | TypeScript JSX     |         14 |          0 |          3 |         17 |
+| g:\SKillSnapFrontend\components\Skills.tsx                                 | TypeScript JSX     |         68 |          0 |         11 |         79 |
+| g:\SKillSnapFrontend\components\WelcomeDialog.tsx                          | TypeScript JSX     |         47 |          0 |          6 |         53 |
+| g:\SKillSnapFrontend\components\custom\InputField.tsx                      | TypeScript JSX     |         25 |          0 |          5 |         30 |
+| g:\SKillSnapFrontend\components\custom\TextareaField.tsx                   | TypeScript JSX     |         25 |          0 |          5 |         30 |
+| g:\SKillSnapFrontend\components\forms\AwardForm.tsx                        | TypeScript JSX     |        149 |          4 |         16 |        169 |
+| g:\SKillSnapFrontend\components\forms\CertificateForm.tsx                  | TypeScript JSX     |        192 |          1 |         18 |        211 |
+| g:\SKillSnapFrontend\components\forms\ContactForm.tsx                      | TypeScript JSX     |        200 |          1 |         17 |        218 |
+| g:\SKillSnapFrontend\components\forms\CourseForm.tsx                       | TypeScript JSX     |        272 |          1 |         23 |        296 |
+| g:\SKillSnapFrontend\components\forms\EducationForm.tsx                    | TypeScript JSX     |        272 |          1 |         24 |        297 |
+| g:\SKillSnapFrontend\components\forms\ExperienceForm.tsx                   | TypeScript JSX     |        254 |          3 |         15 |        272 |
+| g:\SKillSnapFrontend\components\forms\InterestForm.tsx                     | TypeScript JSX     |        114 |          1 |         13 |        128 |
+| g:\SKillSnapFrontend\components\forms\LanguageForm.tsx                     | TypeScript JSX     |        140 |          1 |         15 |        156 |
+| g:\SKillSnapFrontend\components\forms\SettingForm.tsx                      | TypeScript JSX     |         90 |          0 |          8 |         98 |
+| g:\SKillSnapFrontend\components\forms\SkillForm.tsx                        | TypeScript JSX     |        135 |          1 |         15 |        151 |
+| g:\SKillSnapFrontend\components\forms\ThemeSelectorForm.tsx                | TypeScript JSX     |         56 |          0 |          8 |         64 |
+| g:\SKillSnapFrontend\components\forms\UrlForm.tsx                          | TypeScript JSX     |         40 |          0 |          5 |         45 |
+| g:\SKillSnapFrontend\components\icons\Pencil.tsx                           | TypeScript JSX     |         20 |          0 |          1 |         21 |
+| g:\SKillSnapFrontend\components\theme-provider.tsx                         | TypeScript JSX     |          7 |          0 |          3 |         10 |
+| g:\SKillSnapFrontend\components\ui\About\About.tsx                         | TypeScript JSX     |         73 |          0 |          6 |         79 |
+| g:\SKillSnapFrontend\components\ui\About\Description\Description.tsx       | TypeScript JSX     |         59 |          3 |         10 |         72 |
+| g:\SKillSnapFrontend\components\ui\About\Description\index.ts              | TypeScript         |          1 |          0 |          0 |          1 |
+| g:\SKillSnapFrontend\components\ui\About\DisplayPicture\DisplayPicture.tsx | TypeScript JSX     |         54 |          0 |          7 |         61 |
+| g:\SKillSnapFrontend\components\ui\About\DisplayPicture\index.ts           | TypeScript         |          1 |          0 |          0 |          1 |
+| g:\SKillSnapFrontend\components\ui\About\index.ts                          | TypeScript         |          1 |          0 |          1 |          2 |
+| g:\SKillSnapFrontend\components\ui\DisplayPicture\DisplayPicture.tsx       | TypeScript JSX     |         14 |          0 |          4 |         18 |
+| g:\SKillSnapFrontend\components\ui\Modal\Modal.tsx                         | TypeScript JSX     |         42 |          0 |          3 |         45 |
+| g:\SKillSnapFrontend\components\ui\Modal\index.ts                          | TypeScript         |          1 |          0 |          0 |          1 |
+| g:\SKillSnapFrontend\components\ui\button.tsx                              | TypeScript JSX     |         51 |          0 |          6 |         57 |
+| g:\SKillSnapFrontend\components\ui\calendar.tsx                            | TypeScript JSX     |         61 |          0 |          6 |         67 |
+| g:\SKillSnapFrontend\components\ui\card.tsx                                | TypeScript JSX     |         78 |          0 |          9 |         87 |
+| g:\SKillSnapFrontend\components\ui\checkbox.tsx                            | TypeScript JSX     |         26 |          0 |          5 |         31 |
+| g:\SKillSnapFrontend\components\ui\dialog.tsx                              | TypeScript JSX     |        109 |          0 |         14 |        123 |
+| g:\SKillSnapFrontend\components\ui\dialogNew.tsx                           | TypeScript JSX     |        122 |          2 |         14 |        138 |
+| g:\SKillSnapFrontend\components\ui\form.tsx                                | TypeScript JSX     |        152 |          0 |         25 |        177 |
+| g:\SKillSnapFrontend\components\ui\input.tsx                               | TypeScript JSX     |         21 |          0 |          5 |         26 |
+| g:\SKillSnapFrontend\components\ui\label.tsx                               | TypeScript JSX     |         21 |          0 |          6 |         27 |
+| g:\SKillSnapFrontend\components\ui\popover.tsx                             | TypeScript JSX     |         25 |          0 |          7 |         32 |
+| g:\SKillSnapFrontend\components\ui\scroll-area.tsx                         | TypeScript JSX     |         43 |          0 |          6 |         49 |
+| g:\SKillSnapFrontend\components\ui\select.tsx                              | TypeScript JSX     |        146 |          0 |         15 |        161 |
+| g:\SKillSnapFrontend\components\ui\separator.tsx                           | TypeScript JSX     |         27 |          0 |          5 |         32 |
+| g:\SKillSnapFrontend\components\ui\textarea.tsx                            | TypeScript JSX     |         20 |          0 |          5 |         25 |
+| g:\SKillSnapFrontend\lib\ColorPicker.tsx                                   | TypeScript JSX     |         79 |         12 |          8 |         99 |
+| g:\SKillSnapFrontend\lib\DatePicker.tsx                                    | TypeScript JSX     |         43 |          0 |          5 |         48 |
+| g:\SKillSnapFrontend\lib\use-forwarded-ref.tsx                             | TypeScript JSX     |         14 |          0 |          4 |         18 |
+| g:\SKillSnapFrontend\lib\utils.ts                                          | TypeScript         |          5 |          0 |          2 |          7 |
+| g:\SKillSnapFrontend\next.config.mjs                                       | JavaScript         |         13 |          1 |          2 |         16 |
+| g:\SKillSnapFrontend\package-lock.json                                     | JSON               |      8,701 |          0 |          1 |      8,702 |
+| g:\SKillSnapFrontend\package.json                                          | JSON               |         49 |          0 |          1 |         50 |
+| g:\SKillSnapFrontend\postcss.config.mjs                                    | JavaScript         |          6 |          1 |          2 |          9 |
+| g:\SKillSnapFrontend\public\ic_emoji.svg                                   | XML                |          9 |          0 |          1 |         10 |
+| g:\SKillSnapFrontend\public\next.svg                                       | XML                |          1 |          0 |          0 |          1 |
+| g:\SKillSnapFrontend\public\vercel.svg                                     | XML                |          1 |          0 |          0 |          1 |
+| g:\SKillSnapFrontend\tailwind.config.ts                                    | TypeScript         |         81 |          0 |          3 |         84 |
+| g:\SKillSnapFrontend\tsconfig.json                                         | JSON with Comments |         26 |          0 |          1 |         27 |
+| g:\SKillSnapFrontend\utils\dummy.js                                        | JavaScript         |          0 |          0 |          1 |          1 |
+| Total                                                                      |                    |     16,244 |        330 |        704 |     17,278 |
++----------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

@@ -1,6 +1,8 @@
+// layout.tsx
 import type { Metadata } from "next";
 import { Jost, Playball } from "next/font/google";
 import "./globals.css";
+import { Providers } from "./providers";
 
 const jost = Jost({ subsets: ["latin"] });
 const playball = Playball({
@@ -22,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jost.className} ${playball.variable}`}>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
